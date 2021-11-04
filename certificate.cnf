@@ -1,0 +1,47 @@
+[ req ]
+default_bits = 2048
+distinguished_name  = req_distinguished_name
+req_extensions = req_ext
+
+[ req_distinguished_name ]
+countryName = Country Name (2 letter code)
+countryName_default = US
+countryName_min = 2
+countryName_max = 2
+
+stateOrProvinceName = State or Province Name (full name)
+stateOrProvinceName_default = Somewhereville
+
+localityName = Locality Name (eg, city)
+localityName_default = Overthere
+
+0.organizationName = Organization Name (eg, company)
+0.organizationName_default = Digifx
+
+organizationalUnitName = Organizational Unit Name (eg, section)
+organizationalUnitName_default = Telcom
+
+commonName = Common Name (e.g. server FQDN or YOUR name)
+commonName_default = example.Digifix.org
+commonName_max = 64
+
+emailAddress = Email Address
+emailAddress_max = 64
+
+[ req_ext ]
+# Extensions to add to a certificate request
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+
+#Fill out all of your Alternate names here. add as many numbers as needed as shown below. 
+
+DNS.1 = example1.customer.com
+DNS.2 = example2.customer.com
+DNS.3 = example3.customer.com
+IP.1 = 210.1.2.3
+IP.2 = 10.1.1.50
+IP.3 = 10.1.1.51
+
